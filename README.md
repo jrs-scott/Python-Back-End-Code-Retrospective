@@ -1,16 +1,16 @@
 # Python Live Project - Code Retrospective
 
 ## Table of Contents
-* <a href=”#intro”>Introduction</a>
-* <a href=”#travelogue”>Create a Travelogue App</a>
-* <a href=”#accounts”>Improve User Account Management</a>
-* <a href=”#budget”>Add Functionality to the Budget App</a>
-* <a href=”#summary”>Overall Summary</a>
+* <a href="#intro">Introduction</a>
+* <a href="#travelogue">Create a Travelogue App</a>
+* <a href="#accounts">Improve User Account Management</a>
+* <a href="#budget">Add Functionality to the Budget App</a>
+* <a href="#summary">Overall Summary</a>
 
-### <span id=”intro”>Introduction</span>
+### <span id="intro">Introduction</span>
 During a two week sprint, I worked with a team of peers on a web application that facilitates a variety of microservices. The primary languages I used during this project were Python, HTML, CSS and the Django framework. Along with those languages I also utilized Git for version control, Azure DevOps for project tracking, and Slack to communicate with my team. The user stories I completed involved both front and back end work, which provided a rounded development experience. My primary focus was back end, so I used Bootstrap to quickly create user friendly interfaces for my projects that could be easily updated later if need be.
 
-### <span id=”travelogue”>Building the Travelogue App</span>
+### <span id="travelogue">Building the Travelogue App</span>
 The largest feature I implemented was building a travel blog. The user could add title, location, blog content, and tags to their post. The author and date were automatically added by user authentication and current DateTime. Functionality also included editing posts, searching by tags for related content, and the ability for users to add comments.
 
 Here are the models I created. Categories (or tags) are a many to many field because each post can have numerous categories. Comments are a separate model with posts as a forgeign key. 
@@ -165,7 +165,7 @@ The home page of the Travelogue App lists each blog post the user has created, w
 This is the Travelogue details page, so you can view a post in its entirety, search by tags, and leave/view comments. 
 ![Travelogue detail page](https://github.com/jrs-scott/Python-Back-End-Code-Retrospective/blob/master/blog-detail-page.JPG)
 
-### <span id=”accounts”>Improve User Account Management</span>
+### <span id="accounts">Improve User Account Management</span>
 When I started work on the app, there was the ability for a user to log in, but that's it. I improved the account management by adding the ability for a user to create an account, log out, and reset their password via email if they forgot it. 
 
 I went with a clean and straightforward design approach for the log in, create, and forgot password templates. 
@@ -222,7 +222,7 @@ def password_reset_done(request):
 The rest of my task was creating pages for account creation, password reset, and logout. I didn't include those here for sake of brevity.
 
 
-### <span id=”budget”>Extend Functionality of the Budget App</span>
+### <span id="budget">Extend Functionality of the Budget App</span>
 A BudgetApp had been created, but required improvements. My user story was to update the app's UI, add the ability to delete a budget, edit its allotted amount, edit and delete expenses, and add sub navigation within the app. To improve user experience, I started with UI changes. Keeping a similar theme to the Travelogue app, I kept the navigation the same spot on every page so the user never had to search for links. I implemented Bootstrap modals for the edit forms because it was simple and effective. 
 
 Here is the index view of the app, which lists the user's current budgets. Depending on if the budget was at, below, or above $0, the text would change color and give a different description.
@@ -300,7 +300,7 @@ When all was said and done, the details page looked like this. Each edit button 
 ![Budget App details view](https://github.com/jrs-scott/Python-Back-End-Code-Retrospective/blob/master/budget-detail.JPG)
 
 
-## <span id=”summary”>Summary</span>
+## <span id="summary">Summary</span>
 Working on this project gave me a lot of practical experience including:
 * Completing user stories on deadlines
 * Communicating with team members and the project manager to stay on the same page
